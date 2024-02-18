@@ -76,3 +76,6 @@ body {
 .user-pill img {
   height: 100%;
 }
+.suggestions-list li.active {
+  background-color: #ccc;
+}
