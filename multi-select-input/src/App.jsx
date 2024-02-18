@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { debounce } from "lodash";
 import "./App.css";
 
 import Pills from "./components/Pills";
@@ -12,7 +13,7 @@ function App() {
   const inputRef = useRef(null);
 
   useEffect(() => {
-    const fetchUsers = () => {
+    const debouncedFetchUsers = debounce(() => {
       setActiveSuggestion(0);
       if (searchTerm.trim() === "") {
         setSuggestions([]);
@@ -25,8 +26,9 @@ function App() {
         .catch((err) => {
           console.error(err);
         });
-    };
-    fetchUsers();
+    }, 300);
+    debouncedFetchUsers();
+    return () => debouncedFetchUsers.cancel();
   }, [searchTerm]);
 
   const handleSelectedUsers = (user) => {
