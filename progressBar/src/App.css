@@ -1,0 +1,33 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.progressBar {
+  position: relative;
+  width: 500px;
+  height: 20px;
+  background-color: rgb(233, 232, 232);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.progressBar span {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressBar div {
+  height: 100%;
+
+  background-color: greenyellow;
+}
