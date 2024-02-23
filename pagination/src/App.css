@@ -1,0 +1,55 @@
+.product-list-container {
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex; /* Add flex display to container */
+  flex-wrap: wrap; /* Wrap items */
+  justify-content: center; /* Align items to the start of the container */
+}
+
+.product-list-title {
+  text-align: center;
+  width: 100%; /* Ensure title takes full width */
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Align items to the start of the container */
+  flex-wrap: wrap;
+  gap: 20px; /* Add gap between items for consistent spacing */
+  width: 100%; /* Ensure list takes full width */
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  flex: 0 0 340px; /* flex-grow is 0, flex-shrink is 0, flex-basis is 340px */
+  align-items: center; /* Align items to center for equal spacing on sides */
+}
+
+.products > img {
+  width: 100%; /* Set width to 100% of the parent */
+  height: 290px; /* Set height to auto to maintain aspect ratio */
+}
+
+.pagination {
+  gap: 1px;
+  display: flex;
+  justify-content: last baseline;
+}
+
+.pagination button {
+  border: 1px solid gray;
+  padding: 10px;
+  font-weight: bold;
+}
+.pagination span {
+  border: 1px solid gray;
+  padding: 10px;
+  font-weight: bold;
+}
